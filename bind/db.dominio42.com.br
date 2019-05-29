@@ -1,0 +1,26 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	dominio42.com.br. root.dominio42.com.br. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	servidor1.dominio42.com.br.
+@	IN	A	192.168.42.10
+;@	IN	AAAA	::1
+servidor1	IN	A	192.168.42.10
+dns1	IN	CNAME	servidor1.dominio42.com.br.
+dns2	IN	A	192.168.42.20
+cliente	IN	A	192.168.42.30
+www	IN	CNAME	servidor1.dominio42.com.br.
+webmail	IN	CNAME	servidor1.dominio42.com.br.
+mail	IN	CNAME	servidor1.dominio42.com.br.
+imap	IN	CNAME	servidor1.dominio42.com.br.
+smtp	IN	CNAME	servidor1.dominio42.com.br.
+pop	IN	CNAME	servidor1.dominio42.com.br.
+pop3	IN	CNAME	servidor1.dominio42.com.br.
+@	IN	MX 5	servidor1.dominio42.com.br. 
