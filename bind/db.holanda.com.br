@@ -1,0 +1,21 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	holanda.com.br. root.holanda.com.br. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	servidor1.holanda.com.br.
+@	IN	A	192.18.42.10
+;@	IN	AAAA	::1
+servidor1	IN	A 	192.168.42.10
+dns1	IN	CNAME servidor1.holanda.com.br.
+dns2	IN 	A 	192.168.42.20
+cliente	IN	A	192.168.42.30
+www	IN	CNAME	servidor1.holanda.com.br.
+
+
